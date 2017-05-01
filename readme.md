@@ -37,7 +37,7 @@ What you build is up to you, but you must follow these requirements:
 1. Create an appropriate `.gitignore`.
 1. Create a `readme` explaining the purpose of your project, in addition to any other relevant information.
 1. Plan out your user-stories and simple wireframes.
-2. Plan out how you will present this next week, and get any resources together that you will use for this presentation.
+2. Plan out how you will present this tomorrow, and get any resources together that you will use for this presentation.
 1. Happy coding (don't forget to commit frequently)!
 
 ## Some Resources
