@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="FlyBox">
+<head>
+	<title>FlyBox</title>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/flyController.js"></script>
+</head>
+<body>
+	
+	<div ng-controller="FlyController as fly">
+		<!-- {{fly.flyList}} -->
+		<form ng-submit="fly.addFly()">
+			<div>
+				<input type="text" ng-model="fly.newFly.name" placeholder="name">
+				<input type="text" ng-model="fly.newFly.color" placeholder="color">
+				<input type="text" ng-model="fly.newFly.size" placeholder="size">
+				<input type="text" ng-model="fly.newFly.species" placeholder="species">
+				<input type="submit" value="Add Fly">
+			</div>
+		</form>
+
+		<ul>
+			<li ng-repeat="flies in fly.flyList">
+				<strong>{{flies.name}}</strong>
+				<p>{{flies.color}}</p>
+				<p>{{flies.size}}</p>
+				<p>{{flies.species}}</p>
+			</li>
+		</ul>
+
+	</div>
+</body>
+</html>

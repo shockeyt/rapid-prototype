@@ -6,7 +6,12 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-//app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
+
+app.get('/', function homepage (req, res) {
+	res.sendFile(__dirname + '/public/index.html');
+});
+
 
 app.get('/api', function api_index (req, res) {
 	res.json({message: "server running"});
