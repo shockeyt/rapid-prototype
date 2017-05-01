@@ -31,5 +31,19 @@ function FlyController ($http) {
 		vm.newFly = {};
 	}
 
+	vm.deleteFly = deleteFly;
+
+	function deleteFly(flies) {
+		console.log("delete button clicked");
+		console.log(flies._id);
+		$http
+		.delete('/flies/' + flies._id)
+		.then(function(response) {
+			var index = vm.flyList.indexOf(flies);
+			vm.flyList.splice(index, 1);
+			console.log(index);
+		});
+	}
+
 
 }
