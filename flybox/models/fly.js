@@ -6,6 +6,7 @@ var FlySchema = new Schema({
 	color: String,
 	size: Number,
 	species: String,
+	picture: String
 });
 
 var Fly = mongoose.model('Fly', FlySchema);

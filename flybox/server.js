@@ -45,7 +45,8 @@ app.post('/flies', function (req, res) {
 		name: req.body.name,
 		color: req.body.color,
 		size: req.body.size,
-		species: req.body.species
+		species: req.body.species,
+		picture: req.body.picture
 	});
 	newFly.save(function (err, fly) {
 		if (err) {
@@ -75,6 +76,7 @@ app.put('/flies/:id', function (req, res) {
 		if (req.body.color) updatedFly.color = req.body.color;
 		if (req.body.size) updatedFly.size = req.body.size;
 		if (req.body.species) updatedFly.species = req.body.species;
+		if (req.body.picture) updatedFly.picture = req.body.picture;
 
 		updatedFly.save(function(err) {
 			if (err) res.json({message: 'could not update'});
