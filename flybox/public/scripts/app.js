@@ -1,1 +1,1 @@
-angular.module('FlyBox', []);
+angular.module('FlyBox', ['ngRoute']);

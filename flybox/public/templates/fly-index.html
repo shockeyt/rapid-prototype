@@ -1,0 +1,26 @@
+<h1>Index route</h1>
+
+	<!-- <div ng-controller="FlyController as fly"> -->
+	<div ng-controller="FlyController as fly">
+		<!-- {{fly.flyList}} -->
+		<form ng-submit="fly.addFly()">
+			<div>
+				<input type="text" ng-model="fly.newFly.name" placeholder="name">
+				<input type="text" ng-model="fly.newFly.color" placeholder="color">
+				<input type="text" ng-model="fly.newFly.size" placeholder="size">
+				<input type="text" ng-model="fly.newFly.species" placeholder="species">
+				<input type="submit" value="Add Fly">
+			</div>
+		</form>
+
+		<ul>
+			<li ng-repeat="flies in fly.flyList">
+				<strong><a href="/show/{{flies._id}}">{{flies.name}}</a></strong>
+<!-- 				<p>{{flies.color}}</p>
+				<p>{{flies.size}}</p>
+				<p>{{flies.species}}</p> -->
+				<button class="btn btn-danger" ng-click="fly.deleteFly(flies)">X</button></br>
+			</li></br>
+		</ul>
+
+	</div>
