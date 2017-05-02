@@ -2,7 +2,7 @@
 <div class="container-fluid">
 	<div class="container title">
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-12">
 				<h1>flyBox</h1>
 			</div>
 		</div>	
@@ -10,7 +10,7 @@
 	<!-- <div ng-controller="FlyController as fly"> -->
 	<div class="container slanted" ng-controller="FlyController as fly">
 		<div class="row">
-			<div class="col-md-3 flybutton1">
+			<div class="col-md-12 flybutton1">
 		<!-- {{fly.flyList}} -->
 				<button ng-click="reveal = !reveal" class="btn btn-info showForm">Add a Fly</button>
 			</div>
@@ -62,7 +62,7 @@
 				<ul>
 					<li ng-repeat="flies in fly.flyList">
 						<strong><a href="/show/{{flies._id}}">{{flies.name}}</a></strong>
-						<img class="smallImg" src="{{flies.picture}}">
+						<img class="smallImg" ng-src="{{flies.picture}}">
 	<!-- 				<p>{{flies.color}}</p>
 						<p>{{flies.size}}</p>
 						<p>{{flies.species}}</p> -->

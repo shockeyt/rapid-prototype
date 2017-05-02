@@ -1,22 +1,16 @@
-body {
-	background: url("../images/flybox1.jpg")no-repeat;
-	background-size: 700px;
-	display: block;
+/*GLOBAL STYLES*/
 
-	/*background-size: 100% 100%;*/
-	/*	background-repeat: no-repeat;
-	width: 100%;*/
+body {
 	font-family: 'Amatic SC', cursive;
 }
 .container-fluid {
-		/*background-image: url("../images/flybox2.jpeg")*/
-	/*background-size: 100%;*/
-	/*background-repeat: no-repeat;*/
-	/*width: 100%;*/
+	background: url("../images/flybox1.jpg")no-repeat;
+	background-size: 800px;
+	background-position: center;
+	display: block;
+	height: 1000px;
+	overflow: scroll;
 }
-/*.container {
-	border: 3px solid black;
-}*/
 .row {
 	text-align: center;
 	padding: 10px;
@@ -26,6 +20,8 @@ body {
 	-webkit-transform: rotate(+2deg);
 	transform: rotate(+2deg);
 }
+
+/*MAIN PAGE*/
 
 .title {
 	text-align: center;
@@ -97,9 +93,11 @@ form {
 }
 
 ul {
+	display: block;
 	list-style-position: inside;
+	list-style-type: none;
 	text-align: center;
-	margin-right: 95px;
+	margin-right: 60px;
 }
 li {
 	color: white;
@@ -110,6 +108,13 @@ a {
 	background-color: white;
 	border-radius: 10px;
 	color: black;
+}
+
+.smallImg {
+	max-width: 70px;
+	max-height: 70px;
+	border-radius: 100px;
+	border: 1px solid red;
 }
 
 .goback {
@@ -123,28 +128,26 @@ img {
 	max-height: 200px;
 }
 
-.smallImg {
-	max-width: 70px;
-	max-height: 70px;
-	border-radius: 100px;
-	border: 1px solid red;
-}
+
 
 .delete {
-/*	width: 30px;
-	height: 30px;*/
   margin-left: 0.618rem;
   border: 1px solid rgba(0,0,0,0.08);
   border-radius: 50px;
   background-color: transparent;
   color: white;
-  
   font-size: 20px;
-  
   cursor: pointer;
 
 }
 
+/*SHOW STYLES*/
+
+.singleInfo {
+	max-width: 700px;
+	margin: 0 auto;
+	padding-right: 30px;
+}
 
 p {
 	background-color: white;
@@ -153,6 +156,10 @@ p {
 	font-size: 30px;
 	padding-left: 5px;
 	text-align: left;
+}
+
+.thumbnail {
+	display: block;
 }
 
 .description {
